@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Surefire suite" duration-ms="9261" started-at="2021-05-15T10:23:21 BST" finished-at="2021-05-15T10:23:30 BST">
+    <groups>
+    </groups>
+    <test name="Surefire test" duration-ms="9261" started-at="2021-05-15T10:23:21 BST" finished-at="2021-05-15T10:23:30 BST">
+      <class name="com.example.springbootderby.SpringBootDerbyApplicationTests">
+        <test-method status="PASS" signature="addValidCard()" name="addValidCard" duration-ms="8558" started-at="2021-05-15T10:23:21 BST" finished-at="2021-05-15T10:23:30 BST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addValidCard -->
+        <test-method status="PASS" signature="contextLoads()" name="contextLoads" duration-ms="8600" started-at="2021-05-15T10:23:21 BST" finished-at="2021-05-15T10:23:30 BST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- contextLoads -->
+        <test-method status="PASS" signature="addInvalidCard()" name="addInvalidCard" duration-ms="8594" started-at="2021-05-15T10:23:21 BST" finished-at="2021-05-15T10:23:30 BST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addInvalidCard -->
+      </class> <!-- com.example.springbootderby.SpringBootDerbyApplicationTests -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>
