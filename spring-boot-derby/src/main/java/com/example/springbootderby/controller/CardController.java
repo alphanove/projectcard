@@ -14,13 +14,13 @@ import java.util.List;
 import static com.example.springbootderby.service.cardService.isValidCreditCardNumber;
 
 @RestController
-@RequestMapping("/api/v1")
+@RequestMapping("/cardapi/v1")
 public class CardController {
 
     @Autowired
     private CardRepository repository;
-
-    @PostMapping(path="/addCard",produces= MediaType.APPLICATION_JSON_VALUE)//@RequestMapping(method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
+    //@PostMapping(path="/addCard",produces= MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Object> saveCard(@RequestBody Card card) throws Exception {
 
         if (isValidCreditCardNumber(card.getCardNumber())) {
@@ -36,7 +36,8 @@ public class CardController {
         }
     }
 
-        @GetMapping(path="/getAllCards",produces= MediaType.APPLICATION_JSON_VALUE)
+        //@GetMapping(path="/getAllCards",produces= MediaType.APPLICATION_JSON_VALUE)
+        @RequestMapping(method = RequestMethod.GET, consumes = MediaType.APPLICATION_JSON_VALUE)
         public ResponseEntity<List<Card>> getAllCards() {
             List<Card> cards = (List<Card>) repository.findAll();
             return new ResponseEntity<>(cards, HttpStatus.OK);

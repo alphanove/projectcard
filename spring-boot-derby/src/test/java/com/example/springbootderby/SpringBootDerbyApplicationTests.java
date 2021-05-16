@@ -45,7 +45,7 @@ public class SpringBootDerbyApplicationTests {
 	@Test
 	public void addValidCard() {
 		Card cardDetails = new Card("1556954993914435", "Kamal", 1000, 00.00);
-		ResponseEntity<String> postResponse = restTemplate.postForEntity(getRootUrl() + "/api/v1/addCard", cardDetails, String.class);
+		ResponseEntity<String> postResponse = restTemplate.postForEntity(getRootUrl() + "/cardapi/v1", cardDetails, String.class);
 		String obj1 = String.valueOf(postResponse.getBody());
 		assertEquals("Adding a Valid card Detail - Result :", "{\"apiStatusCode\":\"200\",\"apiStatusMessage\":\"Card Added Successfully\"}", obj1);
 	}
@@ -53,7 +53,7 @@ public class SpringBootDerbyApplicationTests {
 	@Test
 	public void addInvalidCard() {
 		Card cardDetails = new Card("1556954993914436", "Kamal", 1000, 00.00);
-		ResponseEntity<String> postResponse = restTemplate.postForEntity(getRootUrl() + "/api/v1/addCard", cardDetails, String.class);
+		ResponseEntity<String> postResponse = restTemplate.postForEntity(getRootUrl() + "/cardapi/v1", cardDetails, String.class);
 		String obj1 = String.valueOf(postResponse.getStatusCode());
 		assertEquals("Adding a InValid card Detail - Result :", "400 BAD_REQUEST", obj1);
 	}
